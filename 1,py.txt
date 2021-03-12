@@ -1,0 +1,30 @@
+
+arr=[1,2,3,4,5,6,7]
+
+
+def binarysearch(arr,se,a,l):
+    if(l>=a):
+        
+        mid=a+(l-a)//2
+        
+        
+        if(arr[mid]==se):
+            
+            print("element is found at position",mid)
+        elif(se>arr[mid]):
+            
+            binarysearch(arr,se,mid+1,l)
+        
+        else:
+            binarysearch(arr,se,a,mid-1)
+    else:
+        print("element is not present in array")
+a=0
+l=len(arr)-1      
+        
+binarysearch(arr,0,a,l)        
+    
+
+    
+
+
