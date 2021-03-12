@@ -1,0 +1,28 @@
+def quicksort(arr,l,r):
+    if(l<r):
+        pi = partition(arr,l,r);
+        quicksort(arr,l,pi-1)
+        quicksort(arr,pi+1,r)
+def partition(arr,l,r):
+    key=arr[r]
+    i=l-1
+    for j in range(l,r+1):
+        if(arr[j]<key):
+            i+=1
+            arr[i],arr[j]=arr[j],arr[i]
+    arr[i+1],arr[r]=arr[r],arr[i+1]
+    return i+1
+def printList(arr):
+    for i in range(len(arr)):
+        print(arr[i],end=" ")
+        
+
+if __name__=="__main__":
+    arr=[6,9,5,0,8,2,4,7]
+    l=0
+    r=len(arr)-1
+    quicksort(arr,l,r)
+    printList(arr)
+
+            
+

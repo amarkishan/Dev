@@ -1,0 +1,48 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+        
+class LinkedList:
+    def __init__self(self):
+        self.head=None
+    
+    def displaylist(self):
+        
+        t=self.head
+        while(t):
+            print(t.data,end="-->")
+            t=t.next
+        print("null") 
+    
+    
+    def searchElement(self,number):
+        count=0
+        t=self.head
+        while(t):
+            if(t.data== number):
+                count+=1
+                print("element is present at position",count)
+                break
+            else:
+                count+=1
+                t=t.next
+                
+            
+        
+    
+    
+if __name__=='__main__':
+    
+    
+     ll=LinkedList()
+     ll.head=Node(1)
+     second=Node(2)
+     third=Node(3)
+     ll.head.next=second
+     second.next=third
+     ll.displaylist()
+     ll.searchElement(2)
+   
+
+

@@ -1,0 +1,10 @@
+def Getheight(node):
+    if node is None:
+        return -1
+    else:
+        l=Getheight(node.left)
+        r=Getheight(node.right)
+        if(l>h):
+            return 1+l
+        else:
+            return 1+r

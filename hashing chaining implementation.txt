@@ -1,0 +1,25 @@
+hashtable=[[]for _ in range(5)]
+len(hashtable)
+def hashfunction(keyvalue):
+    return keyvalue%len(hashtable)
+
+
+def insert(hashtable,keyvalue,value):
+    v=hashfunction(keyvalue)
+    hashtable[v].append(value)
+
+insert(hashtable,10,'amar')
+insert(hashtable,10,'ravi')
+print(hashtable)
+for i in range(len(hashtable)):
+    print(i,end="-->")
+    for j in hashtable[i]:
+        print(j,end="-->")
+    print()    
+        
+        
+
+            
+            
+        
+

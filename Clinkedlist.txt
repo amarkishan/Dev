@@ -1,0 +1,73 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+
+class CsingleLinkedlist:
+    def __init__(self):
+        self.head=None
+        
+    '''def pushtatend(self,data):
+        new_node=Node(data)
+        prev=self.head
+        t=prev.next
+        if self.head is None:
+            self.head.next=new_node
+        while(t):
+            prev=t
+            t=prev.next
+        prev.next=new_node
+        new_node.next=self.head'''
+        
+    def pushatend(self,data):
+        new_node=Node(data)
+        if self.head is None:
+            new_node.next=self.head
+            self.head=new_node
+        
+        while():
+            last.next=new_node
+            new_node.next=self.head
+            
+        
+        
+   
+            
+    def displaylist(self):
+        last=self.head
+        count=0
+        while(True):
+            if(last!=self.head):
+                
+                last=last.next
+                print("last.data")
+            else:
+                
+                if(last==self.head):
+                    count+=1
+                    if(count==2):
+                        break
+                    else:
+                        print(last.data)
+                        last=last.next
+                    
+                
+            
+            
+            
+            
+            
+if  __name__=="__main__":
+    ll=CsingleLinkedlist()
+    ll.head=Node(1)
+    ll.head.next=ll.head
+    ll.pushtatend(2)
+    ll.pushtatend(3)
+    ll.displaylist()
+    #ll.pushtatend(2)
+    
+    
+
+
+        
+        

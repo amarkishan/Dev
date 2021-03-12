@@ -1,0 +1,45 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+
+def insertNode(root):
+    if (not root):
+        root=Node(12)
+    else:    
+        q=[]
+        q.append(root)
+        while(len(q)>0):
+            node=q.pop(0)
+            
+            if(node.left is not None):
+                q.append(node.left)
+                
+                
+            else:
+                node.left=Node(12)
+                break
+            if(node.right is not None):
+                
+                q.append(node.right)
+            else:
+                node.right=Node(12)
+                break
+                
+def inorder(root):
+    if(root):
+        inorder(root.left)
+        print(root.data,end=" ")
+        inorder(root.right)
+            
+root = Node(10) 
+root.left = Node(11) 
+root.left.left = Node(7) 
+root.right = Node(9) 
+root.right.left = Node(15) 
+root.right.right = Node(8)
+inorder(root)
+print()
+insertNode(root)
+inorder(root)

@@ -1,0 +1,79 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+def deletion(root,se):
+    if root is None:
+        return None
+    if root.left is None and root.right is None:
+        if root.data==se:
+            return None
+        else:
+            return root
+    q=[]
+    q.append(root)
+    senode=None
+    while(len(q)>0):
+        
+        t=q.pop(0)
+        if(t.data==se):
+            senode=t
+        if(t.left):
+            q.append(t.left)
+        if(t.right):
+            q.append(t.right)
+            
+    if(senode):
+        x=t.data
+        deleteDeepestNode(root,t)
+        senode.data=x
+    return root        
+    
+            
+def deleteDeepestNode(root,delete_node):
+    q=[]
+    q.append(root)
+    while(len(q)>0):
+        node=q.pop(0)
+        if(node is delete_node):
+            node=None
+            return 
+        if (node.right is not None):
+            if(node.right is delete_node):
+                node.right=None
+                return
+            else:
+                q.append(node.right)
+        if(node.left is not None):
+            if(node.left is delete_node):
+                node.left=None
+                return
+            else:
+                q.append(node.left)
+            
+        
+    
+    
+
+def inorder(node):
+    if(node):
+        inorder(node.left)
+        print(node.data,end=" ")
+        inorder(node.right)
+
+
+root=Node(10)
+root.left=Node(11)
+root.right=Node(9)
+root.left.left=Node(7)
+root.left.right=Node(12)
+root.right.left=Node(15)
+root.right.right=Node(8)
+inorder(root)
+print()
+se=11
+
+
+inorder(deletion(root,se))
+

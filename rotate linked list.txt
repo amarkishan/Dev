@@ -1,0 +1,37 @@
+#rotate linked list
+class Node:
+    def __init__(self,data):
+        self.next=None
+        self.data=data
+        
+class Linkedlist:
+    def Insert(head,element):
+        if(head):
+            t=head
+            while(t.next):
+                t=t.next
+            t.next=Node(element)  
+    def traverse(head):
+        t=head
+        while(t):
+            print(t.data,end=" ")
+            t=t.next
+    def RotateLinkedlist(self,k):
+        if k==0:
+            return
+        current=self.head
+        cout=1
+        while(count<k and current is not None):
+            
+    
+llist=Linkedlist()
+
+llist.head=Node(3)     
+llist.Insert(head,9)
+llist.Insert(head,1)
+llist.Insert(head,2)
+llist.Insert(head,7)
+llist.Insert(head,10)
+llist.RotateLinkedlist(4)
+llist.traverse(head)
+
